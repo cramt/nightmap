@@ -1,5 +1,7 @@
 # nightmap
 
+**Live: https://cramt.github.io/nightmap/**
+
 Real-city battle maps for World of Darkness chronicles. Find a city, restyle it, light up the places
 that matter to your story, draw on it, export a PNG for Foundry (or wherever).
 
@@ -31,3 +33,8 @@ pnpm dev
 The map is a pure function of the project: `buildStyle(project)` produces a whole MapLibre style
 and `setStyle(…, { diff: true })` applies the difference. Only the in-progress drawing bypasses this,
 so mouse moves don't go through the style diff.
+
+## Deploy
+
+Every push to `main` builds and deploys to GitHub Pages (`.github/workflows/pages.yml`). Pull
+requests only build. `VITE_BASE` sets the subpath Pages serves from.
